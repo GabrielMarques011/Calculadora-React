@@ -1,16 +1,13 @@
-import './App.css';
-import Button from './componentes/Button';
+import { Container, Content } from "./sytylePrincipal";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Olá Mundo</h1>
-        <Button title={'Salvar'}/>
-        <Button title={'Excluir'}/>
-        <Button title={'Editar'}/>
-      </header>
-    </div>
+    <Container>
+      <Content>
+      <h1>Olá</h1>
+      </Content>
+    </Container>
   );
 }
 
