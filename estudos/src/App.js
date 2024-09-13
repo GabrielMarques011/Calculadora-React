@@ -38,6 +38,34 @@ function App() {
 
   }
 
+  const divisionNumber = function(){
+    
+    if(primeiroNumber === '0'){
+       setPrimeiroNumber(currentNumber);
+       setCurrentNumber('0');
+       setOperation('/');
+    }else{
+      const soma = Number(primeiroNumber) / Number(currentNumber);
+      setCurrentNumber(String(soma))
+      setOperation('');
+    }
+
+  }
+
+  const multiplicacaoNumber = function(){
+    
+    if(primeiroNumber === '0'){
+       setPrimeiroNumber(currentNumber);
+       setCurrentNumber('0');
+       setOperation('*');
+    }else{
+      const soma = Number(primeiroNumber) * Number(currentNumber);
+      setCurrentNumber(String(soma))
+      setOperation('');
+    }
+
+  }
+
   const resultadoNumber = function(){
     
     if(primeiroNumber != '0' && operation != '' && currentNumber != '0'){
@@ -47,6 +75,12 @@ function App() {
           break;
         case '-':
           menosNumber();
+          break;
+        case '/':
+          divisionNumber();
+          break;
+        case '*':
+          multiplicacaoNumber();
           break;
         default:
           break;
@@ -71,8 +105,8 @@ function App() {
         <Input value={currentNumber}/>
 
         <Row>
-          <Button label={"*"} onClick={() => addNumber('*')}/>
-          <Button label={"/"} onClick={() => addNumber('/')}/>
+          <Button label={"*"} onClick={multiplicacaoNumber}/>
+          <Button label={"/"} onClick={divisionNumber}/>
           <Button label={"C"} onClick={removeNumber}/>
           <Button label={"X"} onClick={() => addNumber('X')}/>
         </Row>
