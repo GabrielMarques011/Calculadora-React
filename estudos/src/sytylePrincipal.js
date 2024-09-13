@@ -4,7 +4,7 @@ export const Container = styled.div`
 
     width: 100%;
     height: 100vh;
-    background-color: gray;
+    background-color: #121212;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,9 +13,11 @@ export const Container = styled.div`
 
 export const Content = styled.div`
 
-    background-color: white; 
+    background-color: #282a2f;
     width: 80%;
-    /* min-height: 350px; */
+    min-height: 350px;
+    border-radius: 13px;
+    box-shadow: rgb(0 0 0 / 81%) 0px 5px 15px;;
 
 `
 
